@@ -32,7 +32,7 @@ class Vehicle {
             for(var i = 0; i < 10; i++) {
             console.log(i);
             }
-            //console.log(i);
+            //console.log(i);//This will throw an error
             }
             iterateVar();
             
@@ -40,6 +40,6 @@ class Vehicle {
                 for(let i = 0; i < 10; i++) {
                 console.log(i);
                 }
-                //console.log(i);
+                //console.log(i);//This will throw an error
                 }
                 iterateLet();
