@@ -23,8 +23,8 @@ class Vehicle {
     function reinitConst(){
         const me = 1;
         console.log(me);
-        me = 2;
-        console.log(me);
+        //me = 2;   //This will throw an error
+        //console.log(me);
         }
         reinitConst();
 
@@ -32,7 +32,7 @@ class Vehicle {
             for(var i = 0; i < 10; i++) {
             console.log(i);
             }
-            console.log(i);
+            //console.log(i);//This will throw an error
             }
             iterateVar();
             
@@ -40,6 +40,6 @@ class Vehicle {
                 for(let i = 0; i < 10; i++) {
                 console.log(i);
                 }
-                console.log(i);
+                //console.log(i);//This will throw an error
                 }
                 iterateLet();
