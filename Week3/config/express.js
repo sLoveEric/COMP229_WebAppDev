@@ -3,7 +3,7 @@ var express = require('express'),
     compress = require('compression'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override');
-    module.exports = function () {
+module.exports = function () {
     var app = express();
     if (process.env.NODE_ENV === 'development') {
         app.use(morgan('dev'));
@@ -17,7 +17,12 @@ var express = require('express'),
     app.use(methodOverride());
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
+    app.use('/', require('../app/routes/index.server.routes.js'));
+    //app.use('/', 'routes');
     //require('../app/routes/index.server.routes.js')(app);
     app.use(express.static('./public'));
+    app.use(express.static("./node_modules"));
     return app;
 };
+
+
